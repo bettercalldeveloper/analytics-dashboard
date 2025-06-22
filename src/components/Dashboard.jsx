@@ -4,7 +4,6 @@ import { DATE_RANGES, CHART_VIEWS } from "../utils/constants";
 import ChartSection from "./ChartSelection";
 import StatsCards from "./StatsCards";
 import MetricsGrid from "./MetricsGrid";
-import DrilldownModal from "./DrillDownModal";
 import {
   calculateStats,
   generateData,
@@ -13,6 +12,7 @@ import {
 } from "../utils/dataHelpers";
 import Header from "./Header";
 import { Calendar, Download, X } from "lucide-react";
+import DetailModal from "./DetailModal";
 
 const Dashboard = () => {
   const [selectedDateRange, setSelectedDateRange] = useState(
@@ -252,7 +252,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <DrilldownModal
+      <DetailModal
         show={showDrilldown}
         onClose={() => setShowDrilldown(false)}
         data={drilldownData}

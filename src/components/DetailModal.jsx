@@ -11,7 +11,7 @@ import {
 import { CustomTooltip } from "../utils/dataHelpers";
 import { COLORS } from "../utils/constants";
 
-const DrilldownModal = ({ show, onClose, data }) => {
+const DetailModal = ({ show, onClose, data }) => {
   if (!show || !data) return null;
 
   return (
@@ -84,4 +84,4 @@ const DrilldownModal = ({ show, onClose, data }) => {
   );
 };
 
-export default DrilldownModal;
+export default DetailModal;
